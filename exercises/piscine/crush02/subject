@@ -1,0 +1,34 @@
+makefile plus all files necessary
+makefile must include fclean function
+executable name is rush-02
+
+Arguments
+
+only 1 argument
+
+argument represents the value we are converting 
+
+needs to use the dict. given to us and must be write allowed
+
+
+
+2 arguments 
+
+1st argument is referencing to an dictionary
+
+2nd argument is the value we have to convert
+
+
+if argument is bigger then unsigned int print 'Error'\n 
+
+Malloc int array
+Fread array from file * (writeable)append only?fseek?
+Print
+Free
+
+Dict. rules
+
+numbers are handles the same way atoi does
+
+spaces have to be trimmed
+

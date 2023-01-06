@@ -1,0 +1,10 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "header.h": "c",
+        "stdio.h": "c",
+        "functions.h": "c",
+        "fcntl.h": "c",
+        "stdlib.h": "c"
+    }
+}
