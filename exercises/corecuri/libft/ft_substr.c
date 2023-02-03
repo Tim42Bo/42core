@@ -1,35 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbornema <tbornema@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 12:34:01 by tbornema          #+#    #+#             */
-/*   Updated: 2023/01/19 04:04:58 by tbornema         ###   ########.fr       */
+/*   Created: 2023/01/19 05:58:36 by tbornema          #+#    #+#             */
+/*   Updated: 2023/02/03 12:43:43 by tbornema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 
 {
 	size_t	i;
+	size_t	j;
+	char	*substr;
 
-	i = 0;
-	if (((char *)dest) > ((char *)src))
+	substr = malloc((len +1) * sizeof(*substr));
+	if (!substr)
+		return (NULL);
+	i = start;
+	j = 0;
+	if (ft_strlen(s) >= start)
 	{
-		while (len-- > 0)
-			((char *)dest)[len] = ((char *)src)[len];
-	}
-	else
-	{
-		while (i < len)
+		while (s[i] != '\0' && i < start + len)
 		{
-			((char *)dest)[i] = ((char *)src)[i];
+			substr[j] = s[i];
+			j++;
 			i++;
 		}
 	}
-	return (dest);
+	substr[j] = '\0';
+	return (substr);
 }
+
+// int	main()
+
+// {
+// 	char	*substr;
+	
+// 	substr = ft_substr("42", 0, 1);
+// 	printf("Substr: %s\n", substr);
+// 	return (0);
+// }

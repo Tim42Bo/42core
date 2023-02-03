@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbornema <tbornema@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 11:44:01 by tbornema          #+#    #+#             */
-/*   Updated: 2023/01/19 04:04:50 by tbornema         ###   ########.fr       */
+/*   Created: 2023/01/17 06:29:16 by honeybadger       #+#    #+#             */
+/*   Updated: 2023/01/19 05:03:07 by tbornema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* (char *)x  is a pointer to an char in an array*/
+
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t len)
-
+char	*ft_strchr(const char *s, int character)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < len)
+	while (*s)
 	{
-		((char *)dest)[i] = ((char *)src)[i];
-		i++;
+		if (*s == (char)character)
+			return ((char *)s);
+		s++;
 	}
-	return (dest);
+	if (character == 0)
+		return ((char *)s);
+	return (0);
 }
+

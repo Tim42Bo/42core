@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbornema <tbornema@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 11:44:01 by tbornema          #+#    #+#             */
-/*   Updated: 2023/01/19 04:04:50 by tbornema         ###   ########.fr       */
+/*   Created: 2023/02/03 12:58:05 by tbornema          #+#    #+#             */
+/*   Updated: 2023/02/03 13:57:03 by tbornema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t len)
+char *ft_strjoin(char const *s1, char const *s2)
 
 {
-	size_t	i;
 
-	i = 0;
-	while (i < len)
-	{
-		((char *)dest)[i] = ((char *)src)[i];
-		i++;
-	}
-	return (dest);
+	char	*newstr;
+	int		len;
+	
+	len = (ft_strlen(s1) + ft_strlen(s2));
+	newstr = malloc((len +1) * sizeof(newstr));
+	if (!newstr)
+		return NULL;
+	ft_strcpy(newstr, (char *)s1);
+	ft_strcat(newstr, (char *)s2);
+	return (newstr);
 }

@@ -6,7 +6,7 @@
 #    By: tbornema <tbornema@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/19 04:06:14 by tbornema          #+#    #+#              #
-#    Updated: 2023/01/19 05:00:46 by tbornema         ###   ########.fr        #
+#    Updated: 2023/02/03 13:58:39 by tbornema         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,11 @@ OBJ_FILES = ft_isalpha.c	\
 			ft_atoi.c		\
 			ft_calloc.c		\
 			ft_strdup.c		\
+			ft_substr.c		\
+			ft_strjoin.c	\
+			ft_strcpy.c		\
+			ft_strcat.c		\
+			ft_strtrim.c	\
 
 NAME = libft.a
 

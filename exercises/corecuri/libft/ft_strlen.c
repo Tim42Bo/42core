@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbornema <tbornema@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 11:44:01 by tbornema          #+#    #+#             */
-/*   Updated: 2023/01/19 04:04:50 by tbornema         ###   ########.fr       */
+/*   Created: 2022/12/05 09:35:34 by tbornema          #+#    #+#             */
+/*   Updated: 2022/12/05 16:32:47 by tbornema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t len)
+size_t	ft_strlen(const char *str)
 
 {
-	size_t	i;
+	int	count;
 
-	i = 0;
-	while (i < len)
+	count = 0;
+	while (str[count] != '\0')
 	{
-		((char *)dest)[i] = ((char *)src)[i];
-		i++;
+		count++;
 	}
-	return (dest);
+	return (count);
 }

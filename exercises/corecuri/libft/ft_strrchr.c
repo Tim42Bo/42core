@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbornema <tbornema@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 11:44:01 by tbornema          #+#    #+#             */
-/*   Updated: 2023/01/19 04:04:50 by tbornema         ###   ########.fr       */
+/*   Created: 2023/01/17 07:54:24 by honeybadger       #+#    #+#             */
+/*   Updated: 2023/01/19 05:03:29 by tbornema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t len)
-
+char	*ft_strrchr(const char *s, int character)
 {
-	size_t	i;
+	char	*searchitem;
 
-	i = 0;
-	while (i < len)
+	searchitem = NULL;
+	while (*s != '\0')
 	{
-		((char *)dest)[i] = ((char *)src)[i];
-		i++;
+		if (*s == (char)character)
+			searchitem = ((char *)s);
+		s++;
 	}
-	return (dest);
+	if (*s == (char)character)
+		searchitem = ((char *)s);
+	return (searchitem);
 }
