@@ -6,13 +6,13 @@
 /*   By: tbornema <tbornema@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 05:08:31 by tbornema          #+#    #+#             */
-/*   Updated: 2023/01/19 05:23:05 by tbornema         ###   ########.fr       */
+/*   Updated: 2023/02/09 15:16:19 by tbornema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 
 {
 	char	*copy;

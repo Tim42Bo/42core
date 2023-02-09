@@ -6,17 +6,17 @@
 /*   By: tbornema <tbornema@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 06:18:17 by honeybadger       #+#    #+#             */
-/*   Updated: 2023/01/19 04:05:54 by tbornema         ###   ########.fr       */
+/*   Updated: 2023/02/09 15:27:09 by tbornema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 
 {
-    if (c >= 97 && c <= 122)
-        return (c -32);
-    else
-        return (c);
+	if (c >= 97 && c <= 122)
+		return (c -32);
+	else
+		return (c);
 }

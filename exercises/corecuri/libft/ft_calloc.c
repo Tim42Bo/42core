@@ -6,7 +6,7 @@
 /*   By: tbornema <tbornema@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 04:51:44 by tbornema          #+#    #+#             */
-/*   Updated: 2023/02/02 14:19:58 by tbornema         ###   ########.fr       */
+/*   Updated: 2023/02/09 15:13:18 by tbornema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
-	size_t	len;
 
-	len = nmemb * size;
-	ptr = malloc(len);
-	if (!ptr)                       // !ptr == ptr <= 0
+	ptr = malloc(nmemb * size);
+	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, len);
+	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }

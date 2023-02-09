@@ -6,7 +6,7 @@
 /*   By: tbornema <tbornema@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 06:22:17 by honeybadger       #+#    #+#             */
-/*   Updated: 2023/01/19 04:05:46 by tbornema         ###   ########.fr       */
+/*   Updated: 2023/02/09 15:28:34 by tbornema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if (c>= 65 && c <= 90)
+	if (c >= 65 && c <= 90)
 		return (c + 32);
 	else
 		return (c);

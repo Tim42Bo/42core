@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbornema <tbornema@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/03 13:57:59 by tbornema          #+#    #+#             */
-/*   Updated: 2023/02/03 17:00:54 by tbornema         ###   ########.fr       */
+/*   Created: 2023/02/09 13:13:23 by tbornema          #+#    #+#             */
+/*   Updated: 2023/02/09 13:13:23 by tbornema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 {
 	char	*cpystr;
-	int		i;
-	int		j;
-	int		k;
-	int		end;
+	size_t	i;
+	size_t	j;
+	size_t	k;
+	size_t	end;
 
 	i = 0;
 	j = 0;
 	k = 0;
-	end = ft_strlen(s1 - 1);
-
-	while (s1[i] == set[k])
-	{
-		if (s1[i] == '\0')
-		{
-			i = 0;
-		}
+	end = ft_strlen(s1);
+	while (s1[i] != '\0' && ft_ischars(s1[i], set))
 		i++;
-			if (s1[i] == '\0')
-				return ((char *)s1);
-	}
-	while (s1[end] == *set)
-	end--;
-	cpystr = malloc((s1[i] + s1[end] + 1) * sizeof(cpystr));
-	while (s1[i] != '\0')
+	while (s1[i] != '\0' && ft_ischars(s1[end -1], set))
+		end--;
+	cpystr = (char *)malloc((end - i + 1) * sizeof(*s1));
+	if (!cpystr)
+		return (NULL);
+	while (i < end)
 	{
 		cpystr[j] = s1[i];
 		j++;
@@ -51,5 +44,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int main()
 // {
-// 	printf("%s\n", ft_strtrim("    xxxxtest", " x"));
+// 	printf("%s\n", ft_strtrim("xxyyzz123xxyyzztestzzyyxx321zzyyxx", "123xyz"));
 // }

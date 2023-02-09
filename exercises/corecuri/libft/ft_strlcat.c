@@ -6,7 +6,7 @@
 /*   By: tbornema <tbornema@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 11:58:42 by tbornema          #+#    #+#             */
-/*   Updated: 2023/02/02 13:37:48 by tbornema         ###   ########.fr       */
+/*   Updated: 2023/02/09 15:16:03 by tbornema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	j = 0;
 	if (dstsize <= dstlen)
 		return (dstsize + srclen);
-	
 	while (src[j] != '\0' && i + 1 < dstsize)
 	{
 		dst[i] = src[j];
@@ -36,14 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (dstlen + srclen);
 }
-/*
-int	main()
-{
-	char src[] = "1234567890\0";
-	char dst[] = "abcdefghij\0";
-	size_t	size = 9;
-	printf("Dst: %s\nSrc: %s\nSize: %d\n\n\n", dst, src, size);
-	ft_strlcat(dst, src, size);
-	printf("Dst: %s\nSrc: %s\nSize: %d\n\n\n", dst, src, size);
-}
-*/
