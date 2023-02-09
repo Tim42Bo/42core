@@ -28,7 +28,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	i = ft_skipc(s, c, i);
-	while (s[i] != '\0')
+	while (s[i] != '\0') //
 	{
 		i = ft_skipc(s, c, i);
 		splitarray[j] = ft_strindexdup(s, c, i);
@@ -39,15 +39,15 @@ char	**ft_split(char const *s, char c)
 	return (splitarray);
 }
 
-// int main()
-// {
+/* int main()
+{
 
-//     int i = 0;
-//     char **array = ft_split("1,2,3", ',');
-//     while (array[i] != 0)
-//     {
-//         printf("%s\n", array[i]);
-//         i++;
-//     }
-//     return (0);
-// }
+    int i = 0;
+    char **array = ft_split("    Eulen sind toll", ' ');
+    while (array[i] != 0)
+    {
+        printf("%s\n", array[i]);
+        i++;
+    }
+    return (0);
+} */
